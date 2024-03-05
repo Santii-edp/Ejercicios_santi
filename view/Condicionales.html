@@ -23,21 +23,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
           <li class="nav-item">
-            <a class="nav-link active" style="color: azure;" href aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" style="color: azure;" href="Condicionales.html">Inicio</a>
 
           </li>
 
-          <li class="nav-item dropdown" >
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: azure;" href href="#">Operadores</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#areatriangulo">área de un triángulo</a></li>
-              <li><a class="dropdown-item" href="#suma">Suma</a></li>
-              <li><a class="dropdown-item" href="#">elevar numero al cuadrado</a></li>
-              <li><a class="dropdown-item" href="#">euros a dolares</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link active" style="color: azure;" href="Operadores.html">Operadores</a>
+
           </li>
                    
           <li class="nav-item dropdown">
@@ -45,22 +37,18 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="www.facebook.com">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
                    
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="color: azure;" href href="#">Ciclos</a>
-            <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: azure;"  href="Ciclos.html">Ciclos</a>
 
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </li>
 
       </div>
@@ -91,7 +79,7 @@
     <div class="carousel-item active">
       <div class="contenedor" style="background-color: rgb(153, 10, 0); ">
 
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Calcular Area de un Triangulo</span></h1>
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Condicional 1</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
@@ -200,9 +188,9 @@
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="ncuadrado">Numero:</label>
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="numeroc">Numero:</label>
           <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="ncuadrado">
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="numeroc">
           
           
           <!-- Boton Calcular -->
@@ -216,11 +204,11 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1> 
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>El cuadrado del número ingresado es: <span id="resultado2"></span></p>
+          <p >El cuadrado del número ingresado es: <span id="resultado2"></span></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -233,10 +221,15 @@
    
           <script>
               function calcularCuadrado() {
-                  var ValorC = parseFloat(document.getElementById("ncuadrado").value);
-                  var cuadrado = ValorC * ValorC;
-                  document.getElementById("resultado2").textContent = cuadrado;
-              }
+    // Obtener el número ingresado
+    var numeroc = parseFloat(document.getElementById("numero").value);
+    
+    // Calcular el cuadrado
+    var cuadrado = numeroc * numeroc;
+    
+    // Mostrar el resultado en el elemento con id "resultado"
+    document.getElementById("resultado2").textContent = cuadrado;
+}
           </script>
         
         </div>
@@ -244,23 +237,23 @@
     <div class="carousel-item">
       <div class="contenedor" style="background-color: rgb(12, 194, 27); ">
 
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero al cuadrado</span></h1>
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Conversion de Euros a Dolares</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="ncuadrado">Numero:</label>
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="ValorE">Euros:</label>
           <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="ncuadrado">
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="ValorE">
           
           
           <!-- Boton Calcular -->
           <button onclick="calcularCuadrado()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal3">
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal4">
     Calcular
           </button>
   </div>
           <!-- Aviso -->
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -268,7 +261,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="resultado3"></p>
+          <p id="resultadoE"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -281,9 +274,9 @@
    
           <script>
               function calcularCuadrado() {
-                  var ncuadrado = parseFloat(document.getElementById("ncuadrado").value);
-                  var cuadrado = ncuadrado * ncuadrado;
-                  document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cuadrado;
+                  var Euros = parseFloat(document.getElementById("ValorE").value);
+                  var TotalE = Euros * 1.08;
+                  document.getElementById("resultadoE").innerText ="el valor de:" + Euros + "E Son: " + TotalE + "Dolares";
               }
           </script>
         
