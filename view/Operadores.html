@@ -30,10 +30,10 @@
           <li class="nav-item dropdown" >
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: azure;" href href="#">Operadores</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="" data-bs-slide="#areatriangulo">área de un triángulo</a></li>
-              <li><a class="dropdown-item" href="#suma">Suma</a></li>
-              <li><a class="dropdown-item" href="#">elevar numero al cuadrado</a></li>
-              <li><a class="dropdown-item" href="#">euros a dolares</a></li>
+              <li><a class="dropdown-item" data-bs-slide="ARETR">área de un triángulo</a></li>
+              <li><a class="dropdown-item" data-bs-slide="SUm2v" >Suma</a></li>
+              <li><a class="dropdown-item" href="">elevar numero al cuadrado</a></li>
+              <li><a class="dropdown-item" href="">euros a dolares</a></li>
               <li><a class="dropdown-item" href="#">Area y Perimetro de un Cuadrado</a></li>
               <li><a class="dropdown-item" href="#">Area y Volumen de un Cilindro</a></li>
               <li><a class="dropdown-item" href="#">radio, Area y longitud de una circunferencia</a></li>
@@ -84,7 +84,7 @@
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" id="ARETR">
       <div class="contenedor" style="background-color: rgb(153, 10, 0); ">
 
           <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Calcular Area de un Triangulo</span></h1>
@@ -136,7 +136,7 @@
         
         </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" id="SUm2v">
       <div class="contenedor" style="background-color: rgb(8, 182, 34); ">
 
           <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Calcular Suma</span></h1>
@@ -190,164 +190,15 @@
         </div>
     </div>
     <div class="carousel-item">
-      <div class="contenedor" style="background-color: rgb(74, 114, 248); ">
-
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero al cuadrado</span></h1>
-  
-          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
-          <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="numeroc">Numero:</label>
-          <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="numeroc">
-          
-          
-          <!-- Boton Calcular -->
-          <button onclick="calcularCuadrado()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal3">
-    Calcular
-          </button>
-  </div>
-          <!-- Aviso -->
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1> 
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p >El cuadrado del número ingresado es: <span id="resultado2"></span></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
-        </div>
-      </div>
-    </div>
-          </div>
-          
-   
-          <script>
-              function calcularCuadrado() {
-    // Obtener el número ingresado
-    var numeroc = parseFloat(document.getElementById("numero").value);
-    
-    // Calcular el cuadrado
-    var cuadrado = numeroc * numeroc;
-    
-    // Mostrar el resultado en el elemento con id "resultado"
-    document.getElementById("resultado2").textContent = cuadrado;
-}
-          </script>
-        
-        </div>
-    </div>
-    <div class="carousel-item">
-      <div class="contenedor" style="background-color: rgb(12, 194, 27); ">
-
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Conversion de Euros a Dolares</span></h1>
-  
-          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
-          <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="ValorE">Euros:</label>
-          <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="ValorE">
-          
-          
-          <!-- Boton Calcular -->
-          <button onclick="calcularCuadrado()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal4">
-    Calcular
-          </button>
-  </div>
-          <!-- Aviso -->
-          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="resultadoE"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
-        </div>
-      </div>
-    </div>
-          </div>
-          
-   
-          <script>
-              function calcularCuadrado() {
-                  var Euros = parseFloat(document.getElementById("ValorE").value);
-                  var TotalE = Euros * 1.08;
-                  document.getElementById("resultadoE").innerText ="el valor de:" + Euros + "E Son: " + TotalE + "Dolares";
-              }
-          </script>
-        
-        </div>
-    </div>
-    <div class="carousel-item">
       <div class="contenedor" style="background-color: rgb(215, 236, 24); ">
 
           <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero al cuadrado</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="nun2">Numero:</label>
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="c">Numero:</label>
           <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="nun2">
-          
-          
-          <!-- Boton Calcular -->
-          <button onclick="calcularCuadrado()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal3">
-    Calcular
-          </button>
-  </div>
-          <!-- Aviso -->
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="resultado2"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
-        </div>
-      </div>
-    </div>
-          </div>
-          
-   
-          <script>
-              function calcularCuadrado() {
-                  var base = parseFloat(document.getElementById("nun2").value);
-                  var cuadrado = nun2 * nun2;
-                  document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cuadrado;
-              }
-          </script>
-        
-        </div>
-    </div>
-    <div class="carousel-item">
-      <div class="contenedor" style="background-color: rgb(153, 0, 145); ">
-
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero al cuadrado</span></h1>
-  
-          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
-          <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="ncuadrado">Numero:</label>
-          <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="ncuadrado">
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="c">
           
           
           <!-- Boton Calcular -->
@@ -378,9 +229,285 @@
    
           <script>
               function calcularCuadrado() {
-                  var base = parseFloat(document.getElementById("ncuadrado").value);
-                  var cuadrado = ncuadrado * ncuadrado;
+                  var vfc = parseFloat(document.getElementById("c").value);
+                  var cf = vfc + vfc;
+                  document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cf;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="contenedor" style="background-color: rgb(12, 194, 27); ">
+
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Conversion de Euros a Dolares</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="e">Euros:</label>
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="e">
+          
+          
+          <!-- Boton Calcular -->
+          <button onclick="calcularConversion()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal4">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Conversion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="eurosr"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calcularConversion() {
+                  var euross = parseFloat(document.getElementById("e").value);
+                  var usaeu= (euross * 1.08);
+                  document.getElementById("eurosr").innerText ="el valor de:" + euross + "E Son: " + usaeu + "Dolares";
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="contenedor" style="background-color: rgb(215, 236, 24); ">
+
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Area y Perimetro en un Cuadrado</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="l1">Longitud:</label>         
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="l1">
+          
+          
+          <!-- Boton Calcular -->
+          <button onclick="calcularPAcua()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal5">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area y Perimetro</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="rta1pc"></p>
+          <p id="rta1ac"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calcularPAcua() {
+                  var lado1 = parseFloat(document.getElementById("l1").value);
+                  var arec = (lado1 * lado1);
+                  var Perimetroc= (lado1 + lado1 + lado1 + lado1);
+                  document.getElementById("rta1pc").innerText = "El Perimetro del Cuadrado es: " + Perimetroc;
+                  document.getElementById("rta1ac").innerText = "El Area del Cuadrado es: " + arec;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="contenedor" style="background-color: rgb(100, 9, 143); ">
+
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Volumen y Area de un Cilindro</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+            <label  style="color: antiquewhite; position: absolute; 
+            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="radiocil">Radio:</label>
+            <input  style=" position: absolute; 
+            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="radiocil">
+            <label style="color: antiquewhite; position: absolute; 
+            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="alturacil">Altura:</label>  
+            <input style=" position: absolute; 
+            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="alturacil">
+          
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaVAcilin()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal6">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Volumen y Area</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultACilin"></p>
+          <p id="Volumresult"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaVAcilin() {
+                  var radiocil = parseFloat(document.getElementById("radiocil").value);
+                  var alturacil = parseFloat(document.getElementById("alturacil").value);
+                  var numpi = (3.1416);
+                  var r2 = (radiocil * radiocil);
+                  var pi2 = (numpi * 2);
+                  var sec1 =(r2 * pi2);
+                  var sec2= (pi2 * radiocil * alturacil)
+                  var resulAcilin = (sec1 + sec2);
+                  var VolumenCili = (numpi*r2*alturacil);
+                  document.getElementById("resultACilin").innerText = "El Area del Cilindro es: " + resulAcilin;
+                  document.getElementById("Volumresult").innerText = "El Volumen del Cilindro es: " + VolumenCili;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="contenedor" style="background-color: rgb(154, 204, 113); ">
+
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">7</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+            <label  style="color: antiquewhite; position: absolute; 
+            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="radiocil">Radio:</label>
+            <input  style=" position: absolute; 
+            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="radioscil">
+            <label style="color: antiquewhite; position: absolute; 
+            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="alturacil">Altura:</label>  
+            <input style=" position: absolute; 
+            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="alturacil">
+          
+          
+          <!-- Boton Calcular -->
+          <button onclick="calcular__()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal6">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultado3"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calcular__() {
+                  var radiocil = parseFloat(document.getElementById("radiocil").value);
+                  var alturacil = parseFloat(document.getElementById("alturacil").value);
+                  var numpi = 3.1416;
+                  var r2 = (radiocil*radiocil);
+                  var resulcilin = ncuadrado * ncuadrado;
                   document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cuadrado;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="contenedor" style="background-color: rgb(153, 0, 33); ">
+
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Promedio 3 numeros</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+            <label  style="color: antiquewhite; position: absolute; 
+            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="vnum1">numero 1:</label>
+            <input  style=" position: absolute; 
+            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="vnum1">
+            <label style="color: antiquewhite; position: absolute; 
+            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="vnum2">numero 2:</label>  
+            <input style=" position: absolute; 
+            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="vnum2">
+            <label style="color: antiquewhite; position: absolute; 
+            top: 56%;left: 30%; transform: translate(-50%, -50%);" for="vnum3">numero 3:</label>  
+            <input style=" position: absolute; 
+            top: 56%;left: 60%; transform: translate(-50%, -50%);" type="number" id="vnum3">
+
+            
+          
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaPromedio3()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal8">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Promedio</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultadoPromf"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaPromedio3() {
+                  var valor1 = parseFloat(document.getElementById("vnum1").value);
+                  var valor2 = parseFloat(document.getElementById("vnum2").value);
+                  var valor3 = parseFloat(document.getElementById("vnum3").value);
+
+                  var Promedioff=  (valor1 + valor2 + valor3) / 3;
+                  document.getElementById("resultadoPromf").innerText = "El Promedio Final es: " + Promedioff;
               }
           </script>
         
@@ -400,7 +527,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <footer>
-    <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+    <p>&copy; 2024 SicalC. Todos los derechos reservados.</p>
 </footer>
 
 </html>
