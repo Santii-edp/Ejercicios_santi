@@ -230,7 +230,7 @@
           <script>
               function calcularCuadrado() {
                   var vfc = parseFloat(document.getElementById("c").value);
-                  var cf = vfc + vfc;
+                  var cf = (vfc * vfc);
                   document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cf;
               }
           </script>
@@ -400,35 +400,33 @@
     <div class="carousel-item">
       <div class="contenedor" style="background-color: rgb(154, 204, 113); ">
 
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">7</span></h1>
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Area y Longitud de una Circunferencia</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
             <label  style="color: antiquewhite; position: absolute; 
-            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="radiocil">Radio:</label>
+            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="radioALcir">Radio:</label>
             <input  style=" position: absolute; 
-            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="radioscil">
-            <label style="color: antiquewhite; position: absolute; 
-            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="alturacil">Altura:</label>  
-            <input style=" position: absolute; 
-            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="alturacil">
+            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="radioALcir">
           
           
           <!-- Boton Calcular -->
-          <button onclick="calcular__()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal6">
+          <button onclick="calculaALcircun()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal7">
     Calcular
           </button>
   </div>
           <!-- Aviso -->
-          <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Numero al cuadrado</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Area y Longitud</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="resultado3"></p>
+          <p id="diameAL"></p>
+          <p id="ResulACIR"></p>
+          <p id="ResulDCIR"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -440,13 +438,16 @@
           
    
           <script>
-              function calcular__() {
-                  var radiocil = parseFloat(document.getElementById("radiocil").value);
-                  var alturacil = parseFloat(document.getElementById("alturacil").value);
+              function calculaALcircun() {
+                  var radioAL = parseFloat(document.getElementById("radioALcir").value);
                   var numpi = 3.1416;
-                  var r2 = (radiocil*radiocil);
-                  var resulcilin = ncuadrado * ncuadrado;
-                  document.getElementById("resultado3").innerText = "El Numero al Cuadrado es: " + cuadrado;
+                  var r2AL = (radioAL*radioAL);
+                  var DiametroCIR = (radioAL+radioAL);
+                  var LongCirc = (numpi * DiametroCIR);
+                  var rasulAL = (numpi * r2AL);
+                  document.getElementById("diameAL").innerText = "La longitud del la Circunferencia Es: " + LongCirc;
+                  document.getElementById("ResulACIR").innerText = "El Area del la Circunferencia Es: " + rasulAL;
+                  document.getElementById("ResulDCIR").innerText = "El Diametro del la Circunferencia Es:  " + DiametroCIR;
               }
           </script>
         
