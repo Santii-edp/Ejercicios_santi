@@ -35,8 +35,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="color: azure;" href="#">Condicionales</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="www.facebook.com">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="">Numero Positivo o Negativo</a></li>
+              <li><a class="dropdown-item" href="#">Numero Mayor y Menor</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -85,36 +85,32 @@
 
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" id="">
       <div class="contenedor" style="background-color: rgb(153, 10, 0); ">
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Condicional 1</span></h1>
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero Positivo y Negativo</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="base">Base:</label>
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="NumNP1">Numero :</label>
           <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="base">
-          <label style="color: antiquewhite; position: absolute; 
-          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="altura">Altura:</label>  
-          <input style=" position: absolute; 
-          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="altura">
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="NumNP1">
           
           <!-- Boton Calcular -->
-          <button onclick="calcularArea()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
-  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button onclick="calcularNP()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal1">
     Calcular
           </button>
   </div>
           <!-- Aviso -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Area Triangulo</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Positivo Y Negativo</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="resultado"></p>
+          <p id="resultadoNP"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -126,48 +122,56 @@
           
    
           <script>
-              function calcularArea() {
-                  var base = parseFloat(document.getElementById("base").value);
-                  var altura = parseFloat(document.getElementById("altura").value);
-                  var resultado = (base * altura) / 2;
-                  document.getElementById("resultado").innerText = "El área del triángulo es: " + resultado;
+              function calcularNP() {
+              // Obtener el valor ingresado por el usuario
+            var numero = parseFloat(document.getElementById("NumNP1").value);
+
+              // Determinar si el número es positivo, negativo o cero
+            var resultadoMensaje = "";
+            if (numero > 0) {
+            resultadoMensaje = "El número ingresado es positivo.";
+            } else if (numero < 0) {
+            resultadoMensaje = "El número ingresado es negativo.";
+            } else {
+            resultadoMensaje = "El número ingresado es cero.";
+              }
+
+              document.getElementById("resultadoNP").innerText = resultadoMensaje;
               }
           </script>
         
         </div>
     </div>
-    <div class="carousel-item">
-      <div class="contenedor" style="background-color: rgb(8, 182, 34); ">
-
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Calcular Suma</span></h1>
+    <div class="carousel-item" id="">
+      <div class="contenedor" style="background-color: rgb(0, 153, 38); ">
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero Positivo y Negativo</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
-          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="valor1">Valor 1:</label>
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="NumMN1">Numero 1:</label>
           <input  style=" position: absolute; 
-          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="valor1">
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="NumMN1">
           <label style="color: antiquewhite; position: absolute; 
-          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="valor2">Valor 2:</label>  
+          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="NumMN2">numero 2:</label>  
           <input style=" position: absolute; 
-          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="valor2">
+          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="NumMN2">
           
           <!-- Boton Calcular -->
-          <button onclick="calcularSuma()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+          <button onclick="calculaMN()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
   top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal2">
     Calcular
           </button>
-          
   </div>
           <!-- Aviso -->
           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Resultado Suma</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Mayor y Menor</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p id="resultado2"></p>
+          <p id="resultadoMN"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -176,14 +180,25 @@
       </div>
     </div>
           </div>
-         
+          
    
           <script>
-              function calcularSuma() {
-                  var valor1 = parseFloat(document.getElementById("valor1").value);
-                  var valor2 = parseFloat(document.getElementById("valor2").value);
-                  var resultado2 = (valor1 + valor2);
-                  document.getElementById("resultado2").innerText = "La Suma de los Valores es: " + resultado2;
+              function calculaMN() {
+              // Obtener el valor ingresado por el usuario
+            var numero1 = parseFloat(document.getElementById("NumMN1").value);
+            var numero2 = parseFloat(document.getElementById("NumMN2").value);
+
+              // Determinar si el número es positivo, negativo o cero
+            var resultadoMensaje = "";
+            if (numero1 > numero2) {
+            resultadoMensajeMN = "El número : " + numero1 + " es mayor que : " + numero2;
+            } else if (numero1 < numero2) {
+            resultadoMensajeMN = "El número : " + numero1 + " es menor que : " + numero2;
+            } else {
+            resultadoMensajeMN = "los valores son los mismos";
+              }
+
+              document.getElementById("resultadoMN").innerText = resultadoMensajeMN;
               }
           </script>
         
