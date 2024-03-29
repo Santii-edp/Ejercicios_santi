@@ -37,10 +37,11 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="">Numero Positivo o Negativo</a></li>
               <li><a class="dropdown-item" href="#">Numero Mayor y Menor</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Mayor y Menor en Enteros Positivos</a></li>
+              <li><a class="dropdown-item" href="#">Numeros A y B Suma o Resta</a></li>
+              <li><a class="dropdown-item" href="#">Numeros A y B Cociente</a></li>
+              <li><a class="dropdown-item" href="#">Numeros A y B Suma o Multiplicacion</a></li>
+              <li><a class="dropdown-item" href="#">Años Bisiestos</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
@@ -144,7 +145,7 @@
     </div>
     <div class="carousel-item" id="2">
       <div class="contenedor" style="background-color: rgb(0, 153, 38); ">
-          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero Positivo y Negativo</span></h1>
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numero Mayor y Menor</span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
           <label  style="color: antiquewhite; position: absolute; 
@@ -204,26 +205,26 @@
         
         </div>
     </div>
-    <div class="carousel-item" id="2">
-      <div class="contenedor" style="background-color: rgb(0, 153, 38); ">
+    <div class="carousel-item" id="3">
+      <div class="contenedor" style="background-color: rgb(195, 255, 126); ">
           <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Mayor y Menor en Enteros Positivos </span></h1>
   
           <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
             <label  style="color: antiquewhite; position: absolute; 
-            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="vnum1p">numero 1:</label>
+            top: 30%;left: 30%; transform: translate(-50%, -50%);" for="N1d3">numero 1:</label>
             <input  style=" position: absolute; 
-            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="vnum1p">
+            top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="N1d3">
             <label style="color: antiquewhite; position: absolute; 
-            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="vnum2p">numero 2:</label>  
+            top: 43%;left: 30%; transform: translate(-50%, -50%);" for="N2d3">numero 2:</label>  
             <input style=" position: absolute; 
-            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="vnum2p">
+            top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="N2d3">
             <label style="color: antiquewhite; position: absolute; 
-            top: 56%;left: 30%; transform: translate(-50%, -50%);" for="vnum3p">numero 3:</label>  
+            top: 56%;left: 30%; transform: translate(-50%, -50%);" for="N3d3">numero 3:</label>  
             <input style=" position: absolute; 
-            top: 56%;left: 60%; transform: translate(-50%, -50%);" type="number" id="vnum3p">
+            top: 56%;left: 60%; transform: translate(-50%, -50%);" type="number" id="N3d3">
           
           <!-- Boton Calcular -->
-          <button onclick="calculaETP()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+          <button onclick="calculaETPC()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
   top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal3c">
     Calcular
           </button>
@@ -250,28 +251,30 @@
           
    
           <script>
-              function calculaETP() {
+              function calculaETPC() {
               // Obtener el valor ingresado por el usuario
-            var numero1 = parseFloat(document.getElementById("vnum1p").value);
-            var numero2 = parseFloat(document.getElementById("vnum2p").value);
-            var numero3 = parseFloat(document.getElementById("vnum3p").value);
+            var numero1 = parseFloat(document.getElementById("N1d3").value);
+            var numero2 = parseFloat(document.getElementById("N2d3").value);
+            var numero3 = parseFloat(document.getElementById("N3d3").value);
+            var resultadoMensajeETP = ""; //almacena el resultado mayor
+            var resultadoMensajeETPM = "";//almacena el resultado menor 
 
-              // Determinar si el número es positivo, negativo o cero
+              // Determina si el número es positivo, negativo o son iguales
             var resultadoMensaje = "";
-            if (numero2 < numero1 > numero3) {
-            resultadoMensajeETP = "El número : " + numero1 + " es mayor que : " + numero2 + "y" + numero3;
-            } else if (numero1 < numero2 > numero3) {
-            resultadoMensajeETP = "El número : " + numero2 + " es mayor que : " + numero1 + "y" + numero3;}
-            else if (numero1 < numero3 > numero2) {
-            resultadoMensajeETP = "El número : " + numero3 + " es mayor que : " + numero2 + "y" + numero3;}
-            else if (numero2 > numero1 < numero3) {
-            resultadoMensajeETPM = "El número : " + numero2 + " es menor que : " + numero2 + "y" + numero3;}
-            else if (numero1 > numero2 < numero3) {
-            resultadoMensajeETPM = "El número : " + numero2 + " es menor que : " + numero1 + "y" + numero3;}
-            else if (numero2 > numero3 < numero2) {
-            resultadoMensajeETPM = "El número : " + numero2 + " es menor que : " + numero2 + "y" + numero3;}
+            if (numero1 > numero2 && numero1 > numero3) {
+            resultadoMensajeETP = "El número : " + numero1 + " es mayor que el: " + numero2 + " y el " + numero3;}
+            else if (numero2 > numero1 && numero2 > numero3) {
+            resultadoMensajeETP = "El número : " + numero2 + " es mayor que el : " + numero1 + " y el " + numero3;}
+            else if (numero3 > numero1 && numero3 > numero2) {
+            resultadoMensajeETP = "El número : " + numero3 + " es mayor que el : " + numero2 + " y el " + numero1;}
+            if (numero2 > numero1 && numero1 < numero3) {
+            resultadoMensajeETPM = "El número : " + numero1 + " es menor que el : " + numero2 + " y el " + numero3;}
+            else if (numero1 > numero2 && numero2 < numero3) {
+            resultadoMensajeETPM = "El número : " + numero2 + " es menor que el : " + numero1 + " y el " + numero3;}
+            else if (numero1 > numero3 && numero3 < numero2) {
+            resultadoMensajeETPM = "El número : " + numero3 + " es menor que el : " + numero1 + " y el " + numero2;}
              else {
-            resultadoMensajeETP = "los valores son los mismos";
+            resultadoMensajeETPM = "los valores son los mismos";
               }
 
               document.getElementById("resultadoETP").innerText = resultadoMensajeETP;
@@ -281,6 +284,256 @@
         
         </div>
     </div>
+    <div class="carousel-item" id="4">
+      <div class="contenedor" style="background-color: rgb(0, 97, 153); ">
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numeros A y B Suma o Resta</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="Num1A">Numero A:</label>
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="Num1A">
+          <label style="color: antiquewhite; position: absolute; 
+          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="Num1B">numero B:</label>  
+          <input style=" position: absolute; 
+          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="Num1B">
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaAYB()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal4c">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal4c" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Suma o Resta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultadoAYB"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaAYB() {
+              // Obtener el valor ingresado por el usuario
+            var numeroA = parseFloat(document.getElementById("Num1A").value);
+            var numeroB = parseFloat(document.getElementById("Num1B").value);
+
+              // Determinar si el número es positivo, negativo o cero
+            var resultadoMensaje = "";
+            if (numeroA < numeroB) {
+            var sumaAYB = (numeroA+numeroB);
+            resultadoMensajeAYB = "Sumamos los Valores el Resultado es: " + sumaAYB ;
+            } else if (numeroA > numeroB) {
+            var restaAYB = (numeroA-numeroB);
+            resultadoMensajeAYB = "Restamos los Valores el Resultado es: " + restaAYB ;
+            } else {
+            resultadoMensajeAYB = "los valores son los mismos";
+              }
+
+              document.getElementById("resultadoAYB").innerText = resultadoMensajeAYB;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item" id="5">
+      <div class="contenedor" style="background-color: rgb(135, 0, 153); ">
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numeros A y B Cociente</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="Num1AC">Numero A:</label>
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="Num1AC">
+          <label style="color: antiquewhite; position: absolute; 
+          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="Num1BC">numero B:</label>  
+          <input style=" position: absolute; 
+          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="Num1BC">
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaAYBC()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal5c">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal5c" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cociente</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultadoAYBC"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaAYBC() {
+              // Obtener el valor ingresado por el usuario
+            var numeroA = parseFloat(document.getElementById("Num1AC").value);
+            var numeroB = parseFloat(document.getElementById("Num1BC").value);
+            var resultadoMensajeAYBC = "";
+              // Determinar si el número es positivo, negativo o cero
+           
+            if (numeroB === 0) {
+            resultadoMensajeAYBC = "Es imposible dividir en 0";
+            } else  {
+            var DivicionAYB = (numeroA/numeroB);
+            resultadoMensajeAYBC = "El Cociente de los Valores es: " + DivicionAYB ;
+            }
+
+              document.getElementById("resultadoAYBC").innerText = resultadoMensajeAYBC;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item" id="6">
+      <div class="contenedor" style="background-color: rgb(0, 130, 153); ">
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Numeros A y B Suma o Multiplicacion</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="Num1ASM">Numero A:</label>
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="Num1ASM">
+          <label style="color: antiquewhite; position: absolute; 
+          top: 43%;left: 30%; transform: translate(-50%, -50%);" for="Num1BSM">numero B:</label>  
+          <input style=" position: absolute; 
+          top: 43%;left: 60%; transform: translate(-50%, -50%);" type="number" id="Num1BSM">
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaAYBSM()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal6c">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal6c" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Suma o Multiplicacion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultadoAYBSM"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaAYBSM() {
+              // Obtener el valor ingresado por el usuario
+            var numeroA = parseFloat(document.getElementById("Num1ASM").value);
+            var numeroB = parseFloat(document.getElementById("Num1BSM").value);
+            var resultadoMensajeAYBSM = "";
+              // Determinar si el número es positivo, negativo o cero
+           
+            if (numeroB < 0) {
+              var SumaAYBSM = (numeroA + numeroB);
+            resultadoMensajeAYBSM = "La Suma de los Valores es :" + SumaAYBSM ;
+            }
+            else if ( numeroA < 0){
+              var SumaAYBSM = (numeroA + numeroB);
+            resultadoMensajeAYBSM = "La Suma de los Valores es :" + SumaAYBSM ;
+            }
+            else  {
+            var MultiplicacionAYBSM = (numeroA * numeroB);
+            resultadoMensajeAYBSM = "La Multiplicacion de los Valores es : " + MultiplicacionAYBSM;
+            }
+
+              document.getElementById("resultadoAYBSM").innerText = resultadoMensajeAYBSM;
+              }
+          </script>
+        
+        </div>
+    </div>
+    <div class="carousel-item" id="7">
+      <div class="contenedor" style="background-color: rgb(0, 130, 153); ">
+          <h1 id="areatriangulo"><span class="badge text-bg-warning" style="position: absolute; top: 5%; left: 30%; background-color: rgb(255, 171, 60);" class="badge text-bg-secondary">Años Bisiestos</span></h1>
+  
+          <div  class="contenedor" style= "position: absolute; background-color: rgb(58, 58, 58); width: 34%; height: 40%; top: 15%; left: 30%; ">
+          <label  style="color: antiquewhite; position: absolute; 
+          top: 30%;left: 30%; transform: translate(-50%, -50%);" for="AñoABI">Año:</label>
+          <input  style=" position: absolute; 
+          top: 30%;left: 60%; transform: translate(-50%, -50%);"class="form-label" type="number" id="AñoABI">
+          
+          <!-- Boton Calcular -->
+          <button onclick="calculaABI()" type="button" class="btn btn-danger" class="calculo" style=" position: absolute; 
+  top: 77%;left: 70%; transform: translate(-50%, -50%); " data-bs-toggle="modal" data-bs-target="#exampleModal7c">
+    Calcular
+          </button>
+  </div>
+          <!-- Aviso -->
+          <div class="modal fade" id="exampleModal7c" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Año</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="resultadoABI"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+          </div>
+          
+   
+          <script>
+              function calculaABI() {
+              // Obtener el valor ingresado por el usuario
+              var año = document.getElementById("AñoABI").value;
+              //si el año es divisible en 400 en bisiesto
+              //si el año es divisible entre 4 es bisiesto
+              //si el año no es divisible entre 100 es bisiesto
+
+              if ((año % 4 == 0 && año % 100 != 0)//año divisible en 4 pero no entre 100
+               || (año % 400 == 0)) //verifica si el año es divisible entre 400 es bisiesto
+                {
+                resultadoMensajeABI = "El año " + año + " es bisiesto.";
+              } else {
+                 resultadoMensajeABI = "El año " + año + " no es bisiesto.";
+                }
+              document.getElementById("resultadoABI").innerText = resultadoMensajeABI;
+              }
+          </script>
+        
+        </div>
+    </div>
+
 
 
   </div>
